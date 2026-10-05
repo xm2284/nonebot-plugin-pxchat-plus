@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="620" viewBox="0 0 760 620" role="img" aria-label="pxchat-plus hand-drawn demo">
+  <defs>
+    <filter id="r" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="r2" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.024" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="p"/>
+      <feColorMatrix in="p" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    </filter>
+    <style><![CDATA[
+      .msg { opacity: 0; animation-duration: 14s; animation-iteration-count: infinite; animation-timing-function: ease-out; }
+      @keyframes m1 { 0%,4%{opacity:0} 10%,100%{opacity:1} }
+      @keyframes m2 { 0%,20%{opacity:0} 26%,100%{opacity:1} }
+      @keyframes m3 { 0%,42%{opacity:0} 48%,100%{opacity:1} }
+      @keyframes m4 { 0%,66%{opacity:0} 72%,100%{opacity:1} }
+      @keyframes m5 { 0%,82%{opacity:0} 88%,100%{opacity:1} }
+      @keyframes typing { 0%,54%{opacity:0} 58%,64%{opacity:1} 66%,100%{opacity:0} }
+      @keyframes dot { 0%,80%,100%{opacity:.3} 40%{opacity:1} }
+      .m1{animation-name:m1} .m2{animation-name:m2} .m3{animation-name:m3} .m4{animation-name:m4} .m5{animation-name:m5}
+      .typing{animation-name:typing}
+      .d1{animation:dot 1.1s infinite} .d2{animation:dot 1.1s infinite .2s} .d3{animation:dot 1.1s infinite .4s}
+    ]]></style>
+  </defs>
+
+  <rect width="760" height="620" fill="#fbf7ee"/>
+  <rect width="760" height="620" filter="url(#paper)"/>
+
+  <!-- wobbly phone -->
+  <path d="M188 26 C 300 16, 470 20, 566 24 C 578 200, 574 420, 570 594 C 460 602, 300 600, 194 596 C 184 420, 190 210, 188 26 Z"
+        fill="#ffffff" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round" filter="url(#r)"/>
+  <!-- header line -->
+  <path d="M190 92 C 320 86, 460 96, 572 90" fill="none" stroke="#2b2b2b" stroke-width="2.4" filter="url(#r2)"/>
+  <text x="206" y="66" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="19" fill="#1f1f1f">小球球大作战</text>
+  <text x="206" y="84" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="13" fill="#8a8a8a">5 人在线 · 生死狙击</text>
+
+  <g font-family="'Comic Sans MS','Segoe Print',cursive" font-size="16">
+    <g class="msg m1" filter="url(#r2)">
+      <rect x="300" y="108" width="256" height="48" rx="18" fill="#dceaf6" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="318" y="138" fill="#1f1f1f">生死狙击都有啥模式啊</text>
+    </g>
+
+    <g class="msg m2" filter="url(#r2)">
+      <rect x="204" y="172" width="336" height="76" rx="18" fill="#f3efe4" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="222" y="202" fill="#1f1f1f">变异刀僵尸 大头英雄 冒险爬塔</text>
+      <text x="222" y="230" fill="#1f1f1f">晚上来不来，缺个车队</text>
+    </g>
+
+    <g class="msg m3" filter="url(#r2)">
+      <rect x="336" y="264" width="220" height="48" rx="18" fill="#dceaf6" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="354" y="294" fill="#1f1f1f">你在群里咋半天不说话</text>
+    </g>
+
+    <g class="typing" filter="url(#r2)">
+      <rect x="204" y="328" width="76" height="42" rx="16" fill="#f3efe4" stroke="#2b2b2b" stroke-width="2"/>
+      <circle class="d1" cx="228" cy="349" r="4.5" fill="#8a8a8a"/>
+      <circle class="d2" cx="242" cy="349" r="4.5" fill="#8a8a8a"/>
+      <circle class="d3" cx="256" cy="349" r="4.5" fill="#8a8a8a"/>
+    </g>
+
+    <g class="msg m4" filter="url(#r2)">
+      <rect x="204" y="392" width="286" height="48" rx="18" fill="#f3efe4" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="222" y="422" fill="#1f1f1f">刚看到 这不就来了嘛</text>
+    </g>
+
+    <g class="msg m5" filter="url(#r2)">
+      <rect x="204" y="458" width="88" height="88" rx="14" fill="#fbd9e0" stroke="#2b2b2b" stroke-width="2"/>
+      <circle cx="232" cy="492" r="5" fill="#2b2b2b"/>
+      <circle cx="264" cy="492" r="5" fill="#2b2b2b"/>
+      <path d="M230 512 q 24 20 46 0" fill="none" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="306" y="512" font-size="12" fill="#8a8a8a">AI 按语气挑的表情包</text>
+    </g>
+  </g>
+
+  <g font-family="'Comic Sans MS','Segoe Print',cursive" font-size="14" fill="#7a7a7a">
+    <text x="596" y="150">← 真人语气</text>
+    <text x="596" y="172">不带「本汪」</text>
+    <text x="40" y="330">按群人设 →</text>
+    <text x="40" y="352">游戏群聊游戏</text>
+  </g>
+</svg>

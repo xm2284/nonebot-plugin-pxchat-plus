@@ -1,0 +1,19 @@
+# 在镜像构建阶段给已安装的 pxchat 打补丁。
+# 三个脚本都是幂等的，重复执行会跳过。
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+
+COPY patch_pxchat.py ./
+COPY patch_pxchat_fixes.py ./
+COPY apply_pergroup.py ./
+RUN python patch_pxchat.py \
+ && python apply_pergroup.py \
+ && python patch_pxchat_fixes.py
+
+COPY . .
+
+CMD ["python", "bot.py"]

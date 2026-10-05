@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-label="pxchat-plus hand-drawn architecture">
+  <defs>
+    <filter id="r" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="r2" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.024" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="p"/>
+      <feColorMatrix in="p" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    </filter>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round"/>
+    </marker>
+    <style><![CDATA[
+      .flow { stroke-dasharray: 9 9; animation: dash 1.3s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -18; } }
+    ]]></style>
+  </defs>
+
+  <rect width="1000" height="420" fill="#fbf7ee"/>
+  <rect width="1000" height="420" filter="url(#paper)"/>
+
+  <text x="40" y="52" font-family="'Comic Sans MS','Segoe Print',cursive" font-size="30" fill="#1f1f1f" filter="url(#r2)">它是怎么跑起来的</text>
+  <path d="M40 66 q 70 -10 140 0 t 120 0" fill="none" stroke="#e07b39" stroke-width="5" stroke-linecap="round" filter="url(#r2)"/>
+
+  <g font-family="'Comic Sans MS','Segoe Print',cursive">
+    <!-- boxes -->
+    <g filter="url(#r2)">
+      <rect x="30" y="170" width="150" height="84" rx="14" fill="#ffffff" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="105" y="206" text-anchor="middle" font-size="18" fill="#1f1f1f">QQ 群聊</text>
+      <text x="105" y="230" text-anchor="middle" font-size="13" fill="#8a8a8a">群友 / 主人</text>
+    </g>
+    <g filter="url(#r2)">
+      <rect x="214" y="170" width="150" height="84" rx="14" fill="#ffffff" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="289" y="206" text-anchor="middle" font-size="18" fill="#1f1f1f">NapCat</text>
+      <text x="289" y="230" text-anchor="middle" font-size="13" fill="#8a8a8a">OneBot V11</text>
+    </g>
+    <g filter="url(#r2)">
+      <rect x="398" y="150" width="212" height="124" rx="14" fill="#eef3fb" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="504" y="188" text-anchor="middle" font-size="19" fill="#1f1f1f">NoneBot2</text>
+      <text x="504" y="214" text-anchor="middle" font-size="14" fill="#3a3a3a">pxchat-plus 补丁</text>
+      <text x="504" y="240" text-anchor="middle" font-size="12" fill="#8a8a8a">人设路由·插话判定·容错</text>
+    </g>
+
+    <g filter="url(#r2)">
+      <rect x="660" y="56" width="300" height="70" rx="12" fill="#fde8cf" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="810" y="88" text-anchor="middle" font-size="15" fill="#1f1f1f">LLM 对话 / 故障自动切换</text>
+      <text x="810" y="110" text-anchor="middle" font-size="12" fill="#8a8a8a">opus4.8 · kimi · vision</text>
+    </g>
+    <g filter="url(#r2)">
+      <rect x="660" y="176" width="300" height="70" rx="12" fill="#e5f0dd" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="810" y="208" text-anchor="middle" font-size="15" fill="#1f1f1f">多引擎联网搜索兜底</text>
+      <text x="810" y="230" text-anchor="middle" font-size="12" fill="#8a8a8a">360 · 搜狗 · Bing RSS</text>
+    </g>
+    <g filter="url(#r2)">
+      <rect x="660" y="296" width="300" height="70" rx="12" fill="#fbd9e0" stroke="#2b2b2b" stroke-width="2.4"/>
+      <text x="810" y="328" text-anchor="middle" font-size="15" fill="#1f1f1f">AI 表情包语义挑选</text>
+      <text x="810" y="350" text-anchor="middle" font-size="12" fill="#8a8a8a">按语气匹配 + 关键词兜底</text>
+    </g>
+  </g>
+
+  <g stroke="#2b2b2b" stroke-width="2.4" fill="none" marker-end="url(#ah)">
+    <line class="flow" x1="180" y1="212" x2="212" y2="212"/>
+    <line class="flow" x1="364" y1="212" x2="396" y2="212"/>
+    <line class="flow" x1="610" y1="196" x2="656" y2="96"/>
+    <line class="flow" x1="610" y1="212" x2="656" y2="211"/>
+    <line class="flow" x1="610" y1="228" x2="656" y2="326"/>
+  </g>
+</svg>

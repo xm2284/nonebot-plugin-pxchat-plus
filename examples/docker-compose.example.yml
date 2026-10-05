@@ -1,0 +1,8 @@
+services:
+  nonebot:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "6199:6199"

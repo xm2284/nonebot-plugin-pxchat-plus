@@ -1,0 +1,26 @@
+# secrets & real config (never commit)
+.env
+*.key
+*_token*
+px_chat_manager.json
+px_chat_context.json
+profiles.json
+remarks.json
+stickers.json
+webui.json
+
+# backups
+*.bak
+*.bak.*
+*.orig
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# os
+.DS_Store
+Thumbs.db
